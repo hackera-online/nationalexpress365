@@ -120,36 +120,48 @@ footer{background:var(--navy);color:#cfe0f4;padding-block:2.3rem;font-size:.95re
 <g class="spd"><line x1="90" y1="360" x2="130" y2="360"/><line x1="70" y1="382" x2="120" y2="382"/><line x1="100" y1="398" x2="140" y2="398"/></g>
 <ellipse cx="310" cy="394" rx="190" ry="9" fill="#000" opacity=".35"/>
 <g class="van">
+<defs>
+<linearGradient id="mb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#eef3f9"/><stop offset=".75" stop-color="#c9d3e0"/><stop offset="1" stop-color="#9aa8ba"/></linearGradient>
+<linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b4660"/><stop offset=".55" stop-color="#101c2b"/><stop offset="1" stop-color="#0a121c"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6c8" stop-opacity=".7"/><stop offset="1" stop-color="#fff6c8" stop-opacity="0"/></linearGradient>
+<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>
+</defs>
+<!-- headlight beam -->
+<path d="M488 316L572 292V352L488 328Z" fill="url(#beam)"/>
 <!-- body -->
-<path d="M136 360V258Q136 242 152 242H372Q386 242 394 252L428 296Q434 303 444 305L472 311Q484 314 484 326V352Q484 360 476 360Z" fill="url(#vb)" stroke="#0b1f3a" stroke-width="3" stroke-linejoin="round"/>
-<!-- roof highlight and lower shadow -->
-<path d="M152 247H372Q382 247 388 255" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-<rect x="138" y="346" width="344" height="12" rx="3" fill="#2b3647"/>
-<!-- brand stripes -->
-<rect x="137" y="322" width="250" height="9" fill="#0f6cb6"/><rect x="137" y="331" width="250" height="5" fill="#e63a3f"/>
-<!-- door shut lines -->
-<path d="M390 262V344M300 250V344" stroke="#9aa7b8" stroke-width="2" fill="none"/>
-<rect x="372" y="298" width="12" height="4" rx="2" fill="#6a7788"/><rect x="284" y="298" width="12" height="4" rx="2" fill="#6a7788"/>
-<!-- cab window -->
-<path d="M396 258L428 298H396Z" fill="url(#vg)" stroke="#0b1f3a" stroke-width="3" stroke-linejoin="round"/>
-<path d="M402 272L416 290" stroke="#fff" stroke-width="3" opacity=".6" stroke-linecap="round"/>
-<!-- mirror -->
-<rect x="434" y="280" width="9" height="18" rx="3" fill="#1d2733"/><path d="M438 298v6" stroke="#1d2733" stroke-width="3"/>
-<!-- headlight, grille, bumper -->
-<path d="M474 312h8q4 0 4 5v9h-12z" fill="#ffe9a8" stroke="#0b1f3a" stroke-width="2"/>
-<rect x="468" y="334" width="18" height="12" rx="2" fill="#1d2733"/>
-<rect x="462" y="348" width="26" height="12" rx="4" fill="#3a4658" stroke="#0b1f3a" stroke-width="2"/>
-<!-- rear light and bumper -->
-<rect x="134" y="300" width="6" height="26" rx="2" fill="#e63a3f"/>
-<rect x="130" y="348" width="20" height="12" rx="4" fill="#3a4658" stroke="#0b1f3a" stroke-width="2"/>
+<path d="M132 358V262Q132 238 158 238H362Q380 238 392 250L430 292Q438 301 452 304L478 311Q490 315 490 328V350Q490 358 480 358Z" fill="url(#mb)" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round"/>
+<!-- roof gloss and shoulder line -->
+<path d="M156 243H360Q372 243 382 252" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".95"/>
+<path d="M136 270H392" stroke="#fff" stroke-width="2" opacity=".55"/>
+<!-- lower cladding -->
+<path d="M134 344H488V350Q488 357 480 357H136Q134 357 134 354Z" fill="#232c3a"/>
+<!-- brand swoosh -->
+<path d="M133 322L391 310V319L133 332Z" fill="#0f6cb6"/><path d="M133 334L391 321V325L133 338Z" fill="#e63a3f"/>
+<!-- panel cuts and flush handles -->
+<path d="M392 258V342M292 242V342" stroke="#a3afbf" stroke-width="1.8" fill="none"/>
+<rect x="374" y="296" width="14" height="3.500" rx="1.700" fill="#7a8799"/><rect x="274" y="296" width="14" height="3.500" rx="1.700" fill="#7a8799"/>
+<!-- blacked-out glass -->
+<path d="M398 254L434 295Q436 298 432 298H398Z" fill="url(#mg)" stroke="#0b1f3a" stroke-width="2.500" stroke-linejoin="round"/>
+<path d="M404 262L420 281" stroke="#9fc4ea" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<!-- camera mirror -->
+<path d="M436 284h6q3 0 3 3v5q0 3-3 3h-6z" fill="#111a26"/><path d="M436 288h-6" stroke="#111a26" stroke-width="3"/>
+<!-- charge port -->
+<rect x="452" y="322" width="14" height="10" rx="3" fill="#dfe6ef" stroke="#7a8799" stroke-width="1.500"/><circle cx="459" cy="327" r="2" fill="#34d27b"/>
+<!-- front: LED signature, lower intake, bumper -->
+<path d="M474 311L489 316" stroke="#fff" stroke-width="5" stroke-linecap="round" filter="url(#gl)" opacity=".9"/>
+<path d="M474 311L489 316" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<path d="M478 321H488" stroke="#ffe9a8" stroke-width="3" stroke-linecap="round"/>
+<rect x="470" y="334" width="19" height="10" rx="3" fill="#111a26"/><path d="M473 337h13M473 341h13" stroke="#2f3d52" stroke-width="1.500"/>
+<!-- rear LED strip -->
+<rect x="131" y="268" width="4" height="52" rx="2" fill="#e63a3f"/><rect x="131" y="268" width="4" height="52" rx="2" fill="#ff6a6e" filter="url(#gl)" opacity=".8"/>
 <!-- company name on side -->
-<text class="van-name" x="154" y="290"><tspan fill="#0f6cb6">national</tspan><tspan fill="#e63a3f">express</tspan><tspan fill="#0f6cb6">365</tspan></text>
-<text x="156" y="309" style="font:600 9px 'IBM Plex Sans',Arial,sans-serif;letter-spacing:.14em" fill="#546580">SAME DAY COURIER · UK &amp; EUROPE</text>
+<text class="van-name" x="152" y="292"><tspan fill="#0f6cb6">national</tspan><tspan fill="#e63a3f">express</tspan><tspan fill="#0f6cb6">365</tspan></text>
+<text x="154" y="308" style="font:600 9px 'IBM Plex Sans',Arial,sans-serif;letter-spacing:.14em" fill="#546580">SAME DAY COURIER · UK &amp; EUROPE</text>
 <!-- wheel arches -->
-<path d="M180 360a30 30 0 0 1 60 0z" fill="#0b1422"/><path d="M388 360a30 30 0 0 1 60 0z" fill="#0b1422"/>
-<!-- wheels -->
-<g><circle cx="210" cy="366" r="26" fill="#10151d"/><circle cx="210" cy="366" r="20" fill="#232b38"/><g class="wh"><circle cx="210" cy="366" r="15" fill="url(#vr)"/><path d="M210 353v26M197 366h26M201 357l18 18M219 357l-18 18" stroke="#6b7686" stroke-width="2"/></g><circle cx="210" cy="366" r="4" fill="#3a4658"/></g>
-<g><circle cx="418" cy="366" r="26" fill="#10151d"/><circle cx="418" cy="366" r="20" fill="#232b38"/><g class="wh"><circle cx="418" cy="366" r="15" fill="url(#vr)"/><path d="M418 353v26M405 366h26M409 357l18 18M427 357l-18 18" stroke="#6b7686" stroke-width="2"/></g><circle cx="418" cy="366" r="4" fill="#3a4658"/></g>
+<path d="M178 358a32 32 0 0 1 64 0z" fill="#0b1422"/><path d="M386 358a32 32 0 0 1 64 0z" fill="#0b1422"/>
+<!-- wheels: aero alloys -->
+<g><circle cx="210" cy="366" r="27" fill="#0d1118"/><circle cx="210" cy="366" r="21" fill="#1c2430"/><g class="wh"><circle cx="210" cy="366" r="17" fill="#cfd6e0"/><circle cx="210" cy="366" r="14" fill="#2a3340"/><path d="M210 354l3 12-3 12-3-12zM198 366l12-3 12 3-12 3zM201.500 357.500l11 5-5 11-6-6zM218.500 374.500l-11-5 5-11 6 6z" fill="#e6ebf2"/></g><circle cx="210" cy="366" r="4.500" fill="#8794a6"/></g>
+<g><circle cx="418" cy="366" r="27" fill="#0d1118"/><circle cx="418" cy="366" r="21" fill="#1c2430"/><g class="wh"><circle cx="418" cy="366" r="17" fill="#cfd6e0"/><circle cx="418" cy="366" r="14" fill="#2a3340"/><path d="M418 354l3 12-3 12-3-12zM406 366l12-3 12 3-12 3zM409.500 357.500l11 5-5 11-6-6zM426.500 374.500l-11-5 5-11 6 6z" fill="#e6ebf2"/></g><circle cx="418" cy="366" r="4.500" fill="#8794a6"/></g>
 </g>
 </svg></div>
 </div></section>
